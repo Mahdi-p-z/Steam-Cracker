@@ -1,0 +1,541 @@
+﻿<Window x:Class="Steam_Cracker.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Steam_Cracker"
+        mc:Ignorable="d"
+        Title="Steam Cracker"
+        Height="300"
+        Width="500"
+        WindowStartupLocation="CenterScreen"
+        WindowStyle="None"
+        ResizeMode="NoResize"
+        Icon="Images/download.png"
+        Loaded="Window_Loaded">
+    <Window.Background>
+        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+            <GradientStop Color="#121b2e" Offset="0"/>
+            <GradientStop Color="#0178ad" Offset="1"/>
+        </LinearGradientBrush>
+    </Window.Background>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="25"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0"
+              Background="#0178ad"
+              MouseDown="Grid_MouseDown">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Image Grid.Column="1"
+                   Source="Images/download.png"
+                   VerticalAlignment="Center"
+                   HorizontalAlignment="Center">
+                
+            </Image>
+            <TextBlock Grid.Column="0"
+                       Text="Steam Cracker By Ariaei"
+                       FontSize="17"
+                       VerticalAlignment="Center"
+                       HorizontalAlignment="Left"
+                       Margin="10,0,-30,0"
+                       Foreground="White">
+                
+            </TextBlock>
+            <Button Grid.Column="2"
+                    Margin="145,0,0,0"
+                    Name="btnKill"
+                    Click="btnKill_Click"
+                    ToolTip="Exit">
+                <Button.Style>
+                    <Style TargetType="Button">
+                        <Setter Property="Background" Value="#800000"/>
+                        <Setter Property="Cursor" Value="Hand"/>
+                        <Style.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background" Value="#FF0000"/>
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+                </Button.Style>
+                <Button.Template>
+                    <ControlTemplate TargetType="Button">
+                        <Border Width="13" Height="13"
+                                CornerRadius="20"
+                                Background="{TemplateBinding Background}">
+
+                            <ContentPresenter VerticalAlignment="Center"
+                                              HorizontalAlignment="Center"/>
+
+                        </Border>
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>
+            <Button Grid.Column="2"
+                    Margin="110,0,0,0"
+                    Name="btnMinimize"
+                    Click="btnMinimize_Click"
+                    ToolTip="Minimize">
+                <Button.Style>
+                    <Style TargetType="Button">
+                        <Setter Property="Background" Value="#ffd500"/>
+                        <Setter Property="Cursor" Value="Hand"/>
+                        <Style.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background" Value="#fff1a8"/>
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+                </Button.Style>
+                <Button.Template>
+                    <ControlTemplate TargetType="Button">
+                        <Border Width="13" Height="13"
+                                CornerRadius="20"
+                                Background="{TemplateBinding Background}">
+
+                            <ContentPresenter VerticalAlignment="Center"
+                                              HorizontalAlignment="Center"/>
+
+                        </Border>
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>
+            <Button Grid.Column="2"
+                    Margin="75,0,0,0"
+                    Name="btnRestart"
+                    Click="btnRestart_Click"
+                    ToolTip="Restart">
+                <Button.Style>
+                    <Style TargetType="Button">
+                        <Setter Property="Background" Value="#8606c2"/>
+                        <Setter Property="Cursor" Value="Hand"/>
+                        <Style.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background" Value="#c961fa"/>
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+                </Button.Style>
+                <Button.Template>
+                    <ControlTemplate TargetType="Button">
+                        <Border Width="13" Height="13"
+                                CornerRadius="20"
+                                Background="{TemplateBinding Background}">
+
+                            <ContentPresenter VerticalAlignment="Center"
+                                              HorizontalAlignment="Center"/>
+
+                        </Border>
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>
+            <Button Grid.Column="2"
+                Margin="40,0,0,0"
+                    Name="btnLog"
+                    Click="btnLog_Click"
+                    ToolTip="Show Log">
+                <Button.Style>
+                    <Style TargetType="Button">
+                        <Setter Property="Background" Value="#02a80f"/>
+                        <Setter Property="Cursor" Value="Hand"/>
+                        <Style.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background" Value="#6bff77"/>
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+                </Button.Style>
+                <Button.Template>
+                    <ControlTemplate TargetType="Button">
+                        <Border Width="13" Height="13"
+                                CornerRadius="20"
+                                Background="{TemplateBinding Background}">
+
+                            <ContentPresenter VerticalAlignment="Center"
+                                              HorizontalAlignment="Center"/>
+
+                        </Border>
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>
+            <Button Grid.Column="2"
+                Margin="5,0,0,0"
+                    Name="btnResult"
+                    Click="btnResult_Click"
+                    ToolTip="Result">
+                <Button.Style>
+                    <Style TargetType="Button">
+                        <Setter Property="Background" Value="#3e414d"/>
+                        <Setter Property="Cursor" Value="Hand"/>
+                        <Style.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background" Value="#75777f"/>
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+                </Button.Style>
+                <Button.Template>
+                    <ControlTemplate TargetType="Button">
+                        <Border Width="13" Height="13"
+                                CornerRadius="20"
+                                Background="{TemplateBinding Background}">
+
+                            <ContentPresenter VerticalAlignment="Center"
+                                              HorizontalAlignment="Center"/>
+
+                        </Border>
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>
+        </Grid>
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Button Content="Start" 
+                Grid.Column="0"
+                Margin="0,0,0,215"
+                    Name="btnStart"
+                    Click="btnStart_Click">
+                <Button.Style>
+                    <Style TargetType="Button">
+                        <Setter Property="Background" Value="#0075da"/>
+                        <Setter Property="Cursor" Value="Hand"/>
+                        <Style.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background" Value="#2ba3df"/>
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+                </Button.Style>
+                <Button.Template>
+                    <ControlTemplate TargetType="Button">
+                        <Border Width="100" Height="35"
+                                CornerRadius="7"
+                                Background="{TemplateBinding Background}">
+
+                            <ContentPresenter VerticalAlignment="Center"
+                                              HorizontalAlignment="Center"/>
+
+                        </Border>
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>
+            <Button Content="Load Base" 
+                Grid.Column="1"
+                Margin="0,0,0,215"
+                    Name="btnBase"
+                    Click="btnBase_Click">
+                <Button.Style>
+                    <Style TargetType="Button">
+                        <Setter Property="Background" Value="#0075da"/>
+                        <Setter Property="Cursor" Value="Hand"/>
+                        <Style.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background" Value="#2ba3df"/>
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+                </Button.Style>
+                <Button.Template>
+                    <ControlTemplate TargetType="Button">
+                        <Border Width="100" Height="35"
+                                CornerRadius="7"
+                                Background="{TemplateBinding Background}">
+
+                            <ContentPresenter VerticalAlignment="Center"
+                                              HorizontalAlignment="Center"/>
+
+                        </Border>
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>
+            <Button Content="Load IP" 
+                Grid.Column="0"
+                Margin="0,0,0,110"
+                    Name="btnIP"
+                    Click="btnIP_Click">
+                <Button.Style>
+                    <Style TargetType="Button">
+                        <Setter Property="Background" Value="#0075da"/>
+                        <Setter Property="Cursor" Value="Hand"/>
+                        <Style.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background" Value="#2ba3df"/>
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+                </Button.Style>
+                <Button.Template>
+                    <ControlTemplate TargetType="Button">
+                        <Border Width="100" Height="35"
+                                CornerRadius="7"
+                                Background="{TemplateBinding Background}">
+
+                            <ContentPresenter VerticalAlignment="Center"
+                                              HorizontalAlignment="Center"/>
+
+                        </Border>
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>
+            <Button Content="Stop" 
+                Grid.Column="1"
+                Margin="0,0,0,110"
+                    Name="btnStop"
+                    Click="btnStop_Click"
+                    IsEnabled="False">
+                <Button.Style>
+                    <Style TargetType="Button">
+                        <Setter Property="Background" Value="#0075da"/>
+                        <Setter Property="Cursor" Value="Hand"/>
+                        <Style.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background" Value="#2ba3df"/>
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+                </Button.Style>
+                <Button.Template>
+                    <ControlTemplate TargetType="Button">
+                        <Border Width="100" Height="35"
+                                CornerRadius="7"
+                                Background="{TemplateBinding Background}">
+
+                            <ContentPresenter VerticalAlignment="Center"
+                                              HorizontalAlignment="Center"/>
+
+                        </Border>
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>
+                <TextBox Name="lblThread"
+                         Text="Thread: 100"
+                         TextChanged="lblThread_TextChanged"
+                         Background="#8ac4ff"
+                         HorizontalAlignment="Center"
+                         VerticalAlignment="Center"
+                         Margin="0,0,22,8"
+                         Height="20"
+                         Width="75"
+                         HorizontalContentAlignment="Center"
+                         VerticalContentAlignment="Center">
+
+                </TextBox>
+                <Button Content="⇑" 
+                Grid.Column="1"
+                Margin="-170,0,0,22"
+                    Name="btnThUP"
+                    Click="btnThUP_Click"
+                    VerticalContentAlignment="Top"
+                        ToolTip="Thread Up"
+                        Foreground="White">
+                <Button.Style>
+                    <Style TargetType="Button">
+                        <Setter Property="Background" Value="#13008c"/>
+                        <Setter Property="Cursor" Value="Hand"/>
+                        <Style.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background" Value="#4629ff"/>
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+                </Button.Style>
+                <Button.Template>
+                    <ControlTemplate TargetType="Button">
+                        <Border Width="15" Height="15"
+                                CornerRadius="4,4,0,0"
+                                Background="{TemplateBinding Background}">
+
+                            <ContentPresenter VerticalAlignment="Center"
+                                              HorizontalAlignment="Center"/>
+
+                        </Border>
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>
+            <Button Content="⇓" 
+                Grid.Column="1"
+                Margin="-170,0,0,-9"
+                    Name="btnThDW"
+                    Click="btnThDW_Click"
+                    VerticalContentAlignment="Center"
+                    ToolTip="Thread Down"
+                    Foreground="White">
+                <Button.Style>
+                    <Style TargetType="Button">
+                        <Setter Property="Background" Value="#13008c"/>
+                        <Setter Property="Cursor" Value="Hand"/>
+                        <Style.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background" Value="#4629ff"/>
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+                </Button.Style>
+                <Button.Template>
+                    <ControlTemplate TargetType="Button">
+                        <Border Width="15" Height="15"
+                                CornerRadius="0,0,4,4"
+                                Background="{TemplateBinding Background}">
+
+                            <ContentPresenter VerticalAlignment="Center"
+                                              HorizontalAlignment="Center"/>
+
+                        </Border>
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>
+            <ComboBox Grid.Column="1"
+                      HorizontalAlignment="Center"
+                      VerticalAlignment="Center"
+                      Height="23"
+                      Width="110"
+                      Margin="0,0,0,10"
+                      ToolTip="IP Type"
+                      SelectedIndex="0"
+                      HorizontalContentAlignment="Center"
+                      VerticalContentAlignment="Center"
+                      Name="ComboboxIP"
+                      Background="LightBlue"
+                      SelectionChanged="ComboboxIP_SelectionChanged">
+                <ComboBoxItem Content="http/s"/>
+                <ComboBoxItem Content="socks4"/>
+                <ComboBoxItem Content="socks4a"/>
+                <ComboBoxItem Content="socks5"/>
+            </ComboBox>
+            <TextBox Grid.ColumnSpan="2"
+                     HorizontalAlignment="Center"
+                     VerticalAlignment="Bottom"
+                     Width="200"
+                     Height="20"
+                     Margin="0,0,0,25"
+                     Text="IP From API:"
+                     Name="textboxIP"
+                     Background="LightBlue"
+                     IsEnabled="False">
+                
+            </TextBox>
+            <CheckBox Name="checkboxIP"
+                      Grid.Column="0"
+                      VerticalAlignment="Center"
+                      HorizontalAlignment="Center"
+                      Width="110"
+                      Margin="0,100,0,0"
+                      Content="Use IP From API"
+                      Click="checkboxIP_Click">
+                
+            </CheckBox>
+            <CheckBox Name="checkboxSave"
+                      Grid.Column="1"
+                      VerticalAlignment="Center"
+                      HorizontalAlignment="Center"
+                      Width="110"
+                      Margin="0,100,0,0"
+                      Content="Only Save Hits"
+                      IsChecked="False"
+                      Click="checkboxSave_Click">
+
+            </CheckBox>
+            <Label Grid.Column="2"
+                   Grid.ColumnSpan="2"
+                   Grid.Row="1"
+                   VerticalAlignment="Top"
+                   HorizontalAlignment="Right"
+                   Content="Remaining: 0"
+                   Name="lblRemaining"
+                   Margin="0,10,15,0"
+                   Width="220"
+                   Foreground="White"/>
+            <Label Grid.Column="2"
+                   Grid.ColumnSpan="2"
+                   Grid.Row="1"
+                   VerticalAlignment="Top"
+                   HorizontalAlignment="Right"
+                   Content="Checked: 0"
+                   Name="lblChecked"
+                   Margin="0,35,15,0"
+                   Width="220"
+                   Foreground="White"/>
+            <Label Grid.Column="2"
+                   Grid.ColumnSpan="2"
+                   Grid.Row="1"
+                   VerticalAlignment="Top"
+                   HorizontalAlignment="Right"
+                   Content="Hit: 0"
+                   Name="lblHit"
+                   Margin="0,70,15,0"
+                   Width="220"
+                   Foreground="LightGreen"/>
+            <Label Grid.Column="2"
+                   Grid.ColumnSpan="2"
+                   Grid.Row="1"
+                   VerticalAlignment="Center"
+                   HorizontalAlignment="Right"
+                   Content="2FA: 0"
+                   Name="lblTfa"
+                   Margin="0,0,15,50"
+                   Width="220"
+                   Foreground="RosyBrown"/>
+            <Label Grid.Column="2"
+                   Grid.ColumnSpan="2"
+                   Grid.Row="1"
+                   VerticalAlignment="Center"
+                   HorizontalAlignment="Right"
+                   Content="Fail: 0"
+                   Name="lblFail"
+                   Margin="0,15,15,0"
+                   Width="220"
+                   Foreground="Red"/>
+            <Label Grid.Column="2"
+                   Grid.ColumnSpan="2"
+                   Grid.Row="1"
+                   VerticalAlignment="Center"
+                   HorizontalAlignment="Right"
+                   Content="Retry: 0"
+                   Name="lblRetry"
+                   Margin="0,75,15,0"
+                   Width="220"
+                   Foreground="Yellow"/>
+            <Label Grid.Column="2"
+                   Grid.ColumnSpan="2"
+                   Grid.Row="1"
+                   VerticalAlignment="Bottom"
+                   HorizontalAlignment="Right"
+                   Content="CPM: 0"
+                   Name="lblCPM"
+                   Margin="0,0,15,55"
+                   Width="220"
+                   Foreground="Black"/>
+            <Label Grid.Column="2"
+                   Grid.ColumnSpan="2"
+                   Grid.Row="1"
+                   VerticalAlignment="Bottom"
+                   HorizontalAlignment="Right"
+                   Content="Total: 0%"
+                   Name="lblPersent"
+                   Margin="0,0,15,30"
+                   Width="220"
+                   Foreground="Black"/>
+            <Label Grid.Column="2"
+                   Grid.ColumnSpan="2"
+                   Grid.Row="1"
+                   VerticalAlignment="Bottom"
+                   HorizontalAlignment="Right"
+                   HorizontalContentAlignment="Center"
+                   Content="00:00:00"
+                   Name="lblTimer"
+                   Margin="0,0,15,5"
+                   Width="220"
+                   Foreground="Black"/>
+        </Grid>
+    </Grid>
+</Window>

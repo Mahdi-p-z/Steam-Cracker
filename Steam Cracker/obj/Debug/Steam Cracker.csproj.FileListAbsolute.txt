@@ -1,0 +1,19 @@
+C:\Users\mahdi\source\repos\Steam Cracker\Steam Cracker\bin\Debug\Steam Cracker.exe.config
+C:\Users\mahdi\source\repos\Steam Cracker\Steam Cracker\bin\Debug\Steam Cracker.exe
+C:\Users\mahdi\source\repos\Steam Cracker\Steam Cracker\bin\Debug\Steam Cracker.pdb
+C:\Users\mahdi\source\repos\Steam Cracker\Steam Cracker\bin\Debug\Leaf.xNet.dll
+C:\Users\mahdi\source\repos\Steam Cracker\Steam Cracker\obj\Debug\MainWindow.g.cs
+C:\Users\mahdi\source\repos\Steam Cracker\Steam Cracker\obj\Debug\Window1.g.cs
+C:\Users\mahdi\source\repos\Steam Cracker\Steam Cracker\obj\Debug\App.g.cs
+C:\Users\mahdi\source\repos\Steam Cracker\Steam Cracker\obj\Debug\Steam Cracker_MarkupCompile.cache
+C:\Users\mahdi\source\repos\Steam Cracker\Steam Cracker\obj\Debug\Steam Cracker_MarkupCompile.lref
+C:\Users\mahdi\source\repos\Steam Cracker\Steam Cracker\obj\Debug\MainWindow.baml
+C:\Users\mahdi\source\repos\Steam Cracker\Steam Cracker\obj\Debug\Window1.baml
+C:\Users\mahdi\source\repos\Steam Cracker\Steam Cracker\obj\Debug\Steam Cracker.g.resources
+C:\Users\mahdi\source\repos\Steam Cracker\Steam Cracker\obj\Debug\Steam_Cracker.Properties.Resources.resources
+C:\Users\mahdi\source\repos\Steam Cracker\Steam Cracker\obj\Debug\Steam Cracker.csproj.GenerateResource.cache
+C:\Users\mahdi\source\repos\Steam Cracker\Steam Cracker\obj\Debug\Steam Cracker.csproj.CoreCompileInputs.cache
+C:\Users\mahdi\source\repos\Steam Cracker\Steam Cracker\obj\Debug\Steam Cracker.csproj.CopyComplete
+C:\Users\mahdi\source\repos\Steam Cracker\Steam Cracker\obj\Debug\Steam Cracker.exe
+C:\Users\mahdi\source\repos\Steam Cracker\Steam Cracker\obj\Debug\Steam Cracker.pdb
+C:\Users\mahdi\source\repos\Steam Cracker\Steam Cracker\obj\Debug\Steam Cracker.csproj.AssemblyReference.cache
